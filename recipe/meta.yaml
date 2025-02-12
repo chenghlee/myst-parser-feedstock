@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "myst-parser" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 851c9dfb44e36e56d15d05e72f02b80da21a9e0d07cba96baf5e2d476bb91531
+  sha256: 5cfea715e4f3574138aecbf7d54132296bfd72bb614d31168f48c477a830a7c4
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - myst-benchmark = myst_parser.cli.benchmark:main
   noarch: python
